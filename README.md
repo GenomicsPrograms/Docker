@@ -31,6 +31,17 @@ Docker containers are created by using a combination of Dockerfile + image.
  <b>Build your Docker container</b>
  
  5. After creating your Dockerfile and specifying the right image within it, build your container.
+    This is also known as the debugging step, as Docker will point out the errors.
  
-         docker build -f Dockerfile -t dinulabasu/potra_cor:2.0 .
+        docker build -f Dockerfile -t dinulabasu/potra_cor:2.0 .
+ 
+ <b>Use your Docker container</b>
+ 
+ 6. Open your Docker container and mount your folder within it.
+ 
+        docker run -i -t -v /home/user/:/user/ dinulabasu/potra_cor /bin/bash
+
+ 
+ 
+ 
  
