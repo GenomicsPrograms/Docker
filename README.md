@@ -33,7 +33,7 @@ Docker containers are created by using a combination of Dockerfile + image.
  5. After creating your Dockerfile and specifying the right image within it, build your container.
     This is also known as the debugging step, as Docker will point out the errors.
  
-        docker build -f Dockerfile -t dinulabasu/potra_cor:2.0 .
+        docker build -f Dockerfile -t dinulabasu/potra_cor:latest .
  
  <b>Use your Docker container</b>
  
@@ -41,7 +41,13 @@ Docker containers are created by using a combination of Dockerfile + image.
  
         docker run -i -t -v /home/user/:/user/ dinulabasu/potra_cor /bin/bash
 
+ <b>Push your Docker container </b>
  
+ 7. Once you are happy with your container, it's time to push it to your docker hub repo.
+    First you need to login to your docker hub repo.
+    
+        docker login
+        docker push dinulabasu/potra_cor:latest
  
  
  
