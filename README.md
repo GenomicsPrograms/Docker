@@ -14,7 +14,7 @@ Docker containers are created by using a combination of Dockerfile + image.
 3. Open a bash shell on the image or to run R on the command line and check it contents and capabilities.
    Note: The image must be R based for the second line of code to work.
 
-   <code>docker run -ti repoName/imageName bash</code>
+   <code>docker run -ti repoName/imageName bash</code><br>
    <code>docker run -ti repoName/imageName R</code>
    
 <b>Create a Dockerfile</b>
