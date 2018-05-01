@@ -32,5 +32,5 @@ Docker containers are created by using a combination of Dockerfile + image.
  
  5. After creating your Dockerfile and specifying the right image within it, build your container.
  
-         <code>docker build -f Dockerfile -t dinulabasu/potra_cor:2.0 .</code>
+         docker build -f Dockerfile -t dinulabasu/potra_cor:2.0 .
  
