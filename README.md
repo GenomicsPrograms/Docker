@@ -11,7 +11,21 @@ Docker containers are created by using a combination of Dockerfile + image.
    
    <code>docker images</code>
 
-3. Check out the image.
+3. Open a bash shell on the image or to run R on the command line and check it contents and capabilities.
+   Note: The image must be R based for the second line of code to work.
 
    <code>docker run -ti repoName/imageName bash</code>
+   <code>docker run -ti repoName/imageName R</code>
 
+4. Create a Dockerfile, this repo has examples that you can review. The image that you choose is always 
+   the first line in your Dockerfile, for example see below:
+   
+   <code>FROM debian:testing</code>
+   
+   or
+   
+   <code>FROM ubuntu:16.04</code>
+   
+ 5. After creating your Dockerfile and specifying the right image within it, build your container.
+ 
+   <code>docker build -f Dockerfile -t dinulabasu/potra_cor:2.0 .</code>
