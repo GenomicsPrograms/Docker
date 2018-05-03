@@ -1,0 +1,23 @@
+FROM bioconductor/devel_base2
+
+## Maintainter: Margaret Linan
+## email: mlinan@asu.edu
+## org: Dinu Lab ASU
+
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite()'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("compiler")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("foreach")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("iterators")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("parallel")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("doParallel")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("AnnotationDbi")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("stats4")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("miRNAtap")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("miRNAtap.db")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("org.Hs.eg.db")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("topGO")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("BiocGenerics")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("graph")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("graphite")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("igraph")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("org.Hs.eg.db")'
