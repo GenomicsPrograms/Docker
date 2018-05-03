@@ -39,7 +39,7 @@ Docker containers are created by using a combination of Dockerfile + image.
  
  6. Open your Docker container and mount your folder within it.
  
-        docker run -i -t -v /home/user/:/user/ repoName/imageName /bin/bash
+        docker run -i -t -v /home/user/:/user/ repoName/imageName:latest /bin/bash
 
  <b>Push your Docker container </b>
  
