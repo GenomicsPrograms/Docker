@@ -1,0 +1,8 @@
+FROM amd64/ubuntu:16.04
+
+## Maintainter: Margaret Linan
+## email: mlinan@asu.edu
+## org: Dinu Lab ASU
+
+COPY bashCommand.sh /usr/bin/
+CMD ["bash", "bashCommand.sh"]
