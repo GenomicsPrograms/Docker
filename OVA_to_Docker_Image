@@ -1,10 +1,10 @@
 ## How to Convert a Virtual Machine OVA file to a Docker Image
 
 <b>Prepare environment (Ubuntu 16.04) by installing necessary packages</b>
-<code>sudo apt-get update
-sudo apt-get install qemu-utils
-sudo apt-get install libguestfs-tools
-sudo apt-get install docker.io</code>
+<code>sudo apt-get update</code>
+<code>sudo apt-get install qemu-utils</code>
+<code>sudo apt-get install libguestfs-tools</code>
+<code>sudo apt-get install docker.io</code>
 
 <b>Retrieve the OVA file</b>
 <code>wget url_to_OVA_file</code>
@@ -14,7 +14,7 @@ Note: rename the file if needed using the mv command
 
 <code>tar -xvf MY_VM.OVA</code>
 
-<b>Convert .VMDK to a Docker Image
+<b>Convert .VMDK to a Docker Image</b>
 <code>qemu-img convert -f vmdk -O raw MY-VM-disk1.vmdk MY-OUT.img</code>
 
 <b>Apply Guestfish (please sudo su to enter root before proceeding)</b>
@@ -30,7 +30,7 @@ Note: rename the file if needed using the mv command
 <code>mytry.xz | docker import - your_repo_name/mytryimage:latest</code>
 
 <b>Look inside the Container</b>
-docker run -it your_repo_name/mytryimage:latest bash
+<code>docker run -it your_repo_name/mytryimage:latest bash</code>
 
 <b>Note:</b> The whole process can take as long as 12 hrs and more, depending on the network connection. 
 Always allocate at least 100 GB of hard disk space and at least 58 GB RAM
